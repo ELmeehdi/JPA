@@ -15,14 +15,12 @@ public class CoursControleur {
     @Autowired //pour faire de l’injection de la classe CoursService au niveau du Controller
     private CoursService coursService;
 
-    @RequestMapping("/modules/{id}/cours") //pour récupérer les cours d’un Module, nous indiquons l’id du
-    //module en question
+    @RequestMapping("/modules/{id}/cours")
     public List<Cours> getAllCours(@PathVariable Integer id) {
         return coursService.getAllCours(id);
     }
 
     @RequestMapping("/modules/{moduleId}/cours/{id}")
-    //pour avoir un cours donné d’un module donné
     public Optional<Cours> getCours(@PathVariable Integer id) {
         return coursService.getCours(id);
     }
