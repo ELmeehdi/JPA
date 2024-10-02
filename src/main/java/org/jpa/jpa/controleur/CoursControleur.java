@@ -33,7 +33,6 @@ public class CoursControleur {
     }
 
     @RequestMapping(method=RequestMethod.PUT, value="/modules/{moduleId}/cours/{id}")
-    //pour modifier un Cours donné d’un Module donné
     public void modifierCours(@RequestBody Cours cours, @PathVariable Integer moduleId,
                               @PathVariable Integer id) {
         cours.setModule(new CustomModule(moduleId,"",""));
