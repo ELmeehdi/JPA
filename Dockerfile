@@ -1,11 +1,8 @@
 # Use a base image (e.g., for a Java application)
-FROM openjdk:11-jre-slim
+FROM java:8
 
-# Set the working directory in the container
-WORKDIR /app
 
 # Copy your project files into the container
-COPY . .
+COPY . /target/JPA-0.0.1-SNAPSHOT.jar JPA-0.0.1-SNAPSHOT.jar
 
-# Command to run your application (adjust this as needed)
-CMD ["java", "-jar", "target/JPA-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","JPA-0.0.1-SNAPSHOT.jar"]
