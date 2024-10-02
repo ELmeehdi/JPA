@@ -1,5 +1,5 @@
 # Use a base image (e.g., for a Java application)
-FROM java:8
+FROM openjdk:8-jdk
 
 
 # Copy your project files into the container
