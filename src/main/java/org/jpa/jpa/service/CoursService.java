@@ -25,7 +25,7 @@ public class CoursService {
         coursRepository.save(cours); //la méthode save est implémentée dans CourseRepository
     }
     public void modifierCours(Cours cours) {
-        coursRepository.save(cours); //ici save dans le rôle de la mise à jour
+        coursRepository.save(cours); 
     }
     public void supprimerCours(Integer id) {
         coursRepository.deleteById(id);
