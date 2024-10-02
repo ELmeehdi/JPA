@@ -40,7 +40,6 @@ public class CoursControleur {
         coursService.modifierCours(cours);
     }
     @RequestMapping(method=RequestMethod.DELETE, value="/modules/{moduleId}/cours/{id}")
-    //pour supprimer un Cours donné d’un Module donné
     public void supprimerCours(@PathVariable Integer id) {
         coursService.supprimerCours(id);
     }
